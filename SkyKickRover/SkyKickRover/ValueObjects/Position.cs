@@ -8,6 +8,9 @@ namespace SkyKickRover.ValueObjects
         private NonNegativeInteger _x;
         private NonNegativeInteger _y;
 
+        public string X => _x.Value.ToString();
+        public string Y => _y.Value.ToString();
+
         public Position(NonNegativeInteger x, NonNegativeInteger y)
         {
             _x = x;

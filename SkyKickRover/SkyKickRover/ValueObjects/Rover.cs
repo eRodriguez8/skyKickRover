@@ -19,5 +19,10 @@ namespace SkyKickRover.ValueObjects
             else if(movements.Name.Equals(MovementsEnumeration.Right)) _cardinal = _cardinal.Right(_cardinal);
             else _position.MoveFoward(_cardinal);
         }
+
+       public string GetPosition()
+        {
+            return $"X: {_position.X}, Y: {_position.Y}, Cardinal: {_cardinal.Name}";
+        }
     }
 }
