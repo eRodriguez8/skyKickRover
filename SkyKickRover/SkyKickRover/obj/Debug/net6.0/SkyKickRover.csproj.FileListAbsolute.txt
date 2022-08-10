@@ -1,0 +1,15 @@
+C:\src\skyKickRover\SkyKickRover\SkyKickRover\bin\Debug\net6.0\SkyKickRover.exe
+C:\src\skyKickRover\SkyKickRover\SkyKickRover\bin\Debug\net6.0\SkyKickRover.deps.json
+C:\src\skyKickRover\SkyKickRover\SkyKickRover\bin\Debug\net6.0\SkyKickRover.runtimeconfig.json
+C:\src\skyKickRover\SkyKickRover\SkyKickRover\bin\Debug\net6.0\SkyKickRover.dll
+C:\src\skyKickRover\SkyKickRover\SkyKickRover\bin\Debug\net6.0\SkyKickRover.pdb
+C:\src\skyKickRover\SkyKickRover\SkyKickRover\obj\Debug\net6.0\SkyKickRover.csproj.AssemblyReference.cache
+C:\src\skyKickRover\SkyKickRover\SkyKickRover\obj\Debug\net6.0\SkyKickRover.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\skyKickRover\SkyKickRover\SkyKickRover\obj\Debug\net6.0\SkyKickRover.AssemblyInfoInputs.cache
+C:\src\skyKickRover\SkyKickRover\SkyKickRover\obj\Debug\net6.0\SkyKickRover.AssemblyInfo.cs
+C:\src\skyKickRover\SkyKickRover\SkyKickRover\obj\Debug\net6.0\SkyKickRover.csproj.CoreCompileInputs.cache
+C:\src\skyKickRover\SkyKickRover\SkyKickRover\obj\Debug\net6.0\SkyKickRover.dll
+C:\src\skyKickRover\SkyKickRover\SkyKickRover\obj\Debug\net6.0\refint\SkyKickRover.dll
+C:\src\skyKickRover\SkyKickRover\SkyKickRover\obj\Debug\net6.0\SkyKickRover.pdb
+C:\src\skyKickRover\SkyKickRover\SkyKickRover\obj\Debug\net6.0\SkyKickRover.genruntimeconfig.cache
+C:\src\skyKickRover\SkyKickRover\SkyKickRover\obj\Debug\net6.0\ref\SkyKickRover.dll

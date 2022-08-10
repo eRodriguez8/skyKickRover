@@ -15,8 +15,8 @@ namespace SkyKickRover.ValueObjects
 
         public void Move(MovementsEnumeration movements)
         {
-            if(movements.Name.Equals(MovementsEnumeration.Left)) _cardinal = _cardinal.Left(_cardinal);
-            else if(movements.Name.Equals(MovementsEnumeration.Right)) _cardinal = _cardinal.Right(_cardinal);
+            if(movements.Name.Equals(MovementsEnumeration.Left)) _cardinal = CardinalsEnumeration.Left(_cardinal);
+            else if(movements.Name.Equals(MovementsEnumeration.Right)) _cardinal = CardinalsEnumeration.Right(_cardinal);
             else _position.MoveFoward(_cardinal);
         }
 

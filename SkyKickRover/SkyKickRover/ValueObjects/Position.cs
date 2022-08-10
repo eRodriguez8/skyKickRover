@@ -1,17 +1,16 @@
 ﻿using SkyKickRover.Enumeration;
-using SkyKickRover.Shared;
 
 namespace SkyKickRover.ValueObjects
 {
     public class Position
     {
-        private NonNegativeInteger _x;
-        private NonNegativeInteger _y;
+        private int _x;
+        private int _y;
 
-        public string X => _x.Value.ToString();
-        public string Y => _y.Value.ToString();
+        public int X => _x;
+        public int Y => _y;
 
-        public Position(NonNegativeInteger x, NonNegativeInteger y)
+        public Position(int x, int y)
         {
             _x = x;
             _y = y;
@@ -19,10 +18,10 @@ namespace SkyKickRover.ValueObjects
 
         public void MoveFoward(CardinalsEnumeration value)
         {
-            if (value.Name.Equals(CardinalsEnumeration.North)) _y = new NonNegativeInteger(_y.Value + 1);
-            else if (value.Name.Equals(CardinalsEnumeration.South)) _y = new NonNegativeInteger(_y.Value - 1);
-            else if (value.Name.Equals(CardinalsEnumeration.East)) _x = new NonNegativeInteger(_x.Value + 1);
-            else _x = new NonNegativeInteger(_x.Value - 1);
+            if (value.Name.Equals(CardinalsEnumeration.North.Name)) _y += 1;
+            else if (value.Name.Equals(CardinalsEnumeration.South.Name)) _y -= 1;
+            else if (value.Name.Equals(CardinalsEnumeration.East.Name)) _x += 1;
+            else _x -= 1;
         }
     }
 }

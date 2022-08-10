@@ -11,7 +11,7 @@
         {
         }
 
-        public CardinalsEnumeration Left(CardinalsEnumeration value)
+        public static CardinalsEnumeration Left(CardinalsEnumeration value)
         {
             if (value.Name.Equals(North)) return West;
             else if (value.Name.Equals(West)) return South;
@@ -19,7 +19,7 @@
             else return North;
         }
 
-        public CardinalsEnumeration Right(CardinalsEnumeration value)
+        public static CardinalsEnumeration Right(CardinalsEnumeration value)
         {
             if (value.Name.Equals(North)) return East;
             else if (value.Name.Equals(East)) return South;

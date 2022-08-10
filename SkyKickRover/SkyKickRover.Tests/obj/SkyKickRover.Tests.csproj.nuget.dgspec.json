@@ -28,7 +28,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\src\\skyKickRover\\SkyKickRover\\SkyKickRover\\SkyKickRover.csproj": {
+                "projectPath": "C:\\src\\skyKickRover\\SkyKickRover\\SkyKickRover\\SkyKickRover.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -66,6 +70,61 @@
               "version": "[2.4.3, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\src\\skyKickRover\\SkyKickRover\\SkyKickRover\\SkyKickRover.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\src\\skyKickRover\\SkyKickRover\\SkyKickRover\\SkyKickRover.csproj",
+        "projectName": "SkyKickRover",
+        "projectPath": "C:\\src\\skyKickRover\\SkyKickRover\\SkyKickRover\\SkyKickRover.csproj",
+        "packagesPath": "C:\\Users\\Ema\\.nuget\\packages\\",
+        "outputPath": "C:\\src\\skyKickRover\\SkyKickRover\\SkyKickRover\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ema\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://gitlab.com/api/v4/groups/15321409/-/packages/nuget/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",
