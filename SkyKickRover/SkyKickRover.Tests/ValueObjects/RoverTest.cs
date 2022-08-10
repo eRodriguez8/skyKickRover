@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
 using SkyKickRover.Enumeration;
 using SkyKickRover.Models;
+using SkyKickRover.ValueObjects;
 
 namespace SkyKickRover.Tests.ValueObjects
 {
@@ -11,7 +12,7 @@ namespace SkyKickRover.Tests.ValueObjects
 
         public RoverTest()
         {
-            _rover = new Rover(new Position(10, 10), CardinalsEnumeration.East);
+            _rover = new Rover(new Position(10, 10), Cardinal.East);
             _defaultCardinalRover = new Rover(new Position(0, 0));
         }
 
@@ -23,7 +24,7 @@ namespace SkyKickRover.Tests.ValueObjects
 
             _rover.GetPosition()
                 .Should()
-                .Be($"X: {0}, Y: {0}, Cardinal: {CardinalsEnumeration.East.Name}");
+                .Be($"X: {0}, Y: {0}, Cardinal: {Cardinal.East.Value}");
         }
     }
 }

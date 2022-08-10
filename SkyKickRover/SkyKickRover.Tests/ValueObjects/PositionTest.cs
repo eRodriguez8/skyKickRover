@@ -1,5 +1,4 @@
 ﻿using FluentAssertions;
-using SkyKickRover.Enumeration;
 using SkyKickRover.ValueObjects;
 
 namespace SkyKickRover.Tests.ValueObjects
@@ -17,52 +16,44 @@ namespace SkyKickRover.Tests.ValueObjects
         [Trait("Categories", "Position")]
         public void Given_a_position_when_move_foward_recive_cardinal_north_then_should_increase_y()
         {
-            var y = _position.Y;
+            var response = _position.MoveFoward(Cardinal.North);
 
-            _position.MoveFoward(CardinalsEnumeration.North);
-
-            _position.Y
+            response.Y
                 .Should()
-                .Be(y + 1);
+                .Be(_position.Y + 1);
         }
 
         [Fact]
         [Trait("Categories", "Position")]
         public void Given_a_position_when_move_foward_recive_cardinal_south_then_should_decrease_y()
         {
-            var y = _position.Y;
+            var response = _position.MoveFoward(Cardinal.South);
 
-            _position.MoveFoward(CardinalsEnumeration.South);
-
-            _position.Y
+            response.Y
                 .Should()
-                .Be(y - 1);
+                .Be(_position.Y - 1);
         }
 
         [Fact]
         [Trait("Categories", "Position")]
         public void Given_a_position_when_move_foward_recive_cardinal_east_then_should_increase_x()
         {
-            var x = _position.X;
+            var response = _position.MoveFoward(Cardinal.East);
 
-            _position.MoveFoward(CardinalsEnumeration.East);
-
-            _position.X
+            response.X
                 .Should()
-                .Be(x + 1);
+                .Be(_position.X + 1);
         }
 
         [Fact]
         [Trait("Categories", "Position")]
         public void Given_a_position_when_move_foward_recive_cardinal_west_then_should_decrease_x()
         {
-            var x = _position.X;
+            var response = _position.MoveFoward(Cardinal.West);
 
-            _position.MoveFoward(CardinalsEnumeration.West);
-
-            _position.X
+            response.X
                 .Should()
-                .Be(x - 1);
+                .Be(_position.X - 1);
         }
     }
 }

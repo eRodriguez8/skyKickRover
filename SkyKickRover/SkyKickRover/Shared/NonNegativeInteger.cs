@@ -13,5 +13,10 @@
 
             _value = value;
         }
+
+        public static NonNegativeInteger Zero()
+        {
+            return new NonNegativeInteger(0);
+        }
     }
 }

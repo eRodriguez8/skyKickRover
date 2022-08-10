@@ -7,16 +7,16 @@ namespace SkyKickRover.Models
     {
         private readonly Guid _guid;
         private Position _position;
-        private CardinalsEnumeration _cardinal;
+        private Cardinal _cardinal;
 
         public Rover(Position position)
         {
             _guid = Guid.NewGuid();
             _position = position;
-            _cardinal = CardinalsEnumeration.North;
+            _cardinal = Cardinal.North;
         }
 
-        public Rover(Position position, CardinalsEnumeration cardinal) : this(position)
+        public Rover(Position position, Cardinal cardinal) : this(position)
         {
             _cardinal = cardinal;
         }
@@ -26,10 +26,10 @@ namespace SkyKickRover.Models
             switch(movement.Name)
             {
                 case MovementsEnumeration.LEFT:
-                    _cardinal = CardinalsEnumeration.Left(_cardinal);
+                    _cardinal = _cardinal.RotateLeft();
                     break;
                 case MovementsEnumeration.RIGHT:
-                    _cardinal = CardinalsEnumeration.Right(_cardinal);
+                    _cardinal = _cardinal.RotateRight();
                     break;
                 case MovementsEnumeration.MOVE:
                     _position = _position.MoveFoward(_cardinal);
@@ -39,7 +39,7 @@ namespace SkyKickRover.Models
 
        public string GetPosition()
         {
-            return $"X: {_position.X}, Y: {_position.Y}, Cardinal: {_cardinal.Name}";
+            return $"Identifier: {_guid}, X: {_position.X}, Y: {_position.Y}, Cardinal: {_cardinal.Value}";
         }
     }
 }
