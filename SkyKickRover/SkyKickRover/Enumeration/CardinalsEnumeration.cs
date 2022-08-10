@@ -2,10 +2,15 @@
 {
     public class CardinalsEnumeration : Enumeration
     {
-        public static readonly CardinalsEnumeration North = new(1, "North");
-        public static readonly CardinalsEnumeration South = new(2, "South");
-        public static readonly CardinalsEnumeration East = new(3, "East");
-        public static readonly CardinalsEnumeration West = new(4, "West");
+        public const string NORTH = "North";
+        public const string SOUTH = "South";
+        public const string EAST = "East";
+        public const string WEST = "West";
+
+        public static readonly CardinalsEnumeration North = new(1, NORTH);
+        public static readonly CardinalsEnumeration South = new(2, SOUTH);
+        public static readonly CardinalsEnumeration East = new(3, EAST);
+        public static readonly CardinalsEnumeration West = new(4, WEST);
 
         public CardinalsEnumeration(int id, string name) : base(id, name)
         {

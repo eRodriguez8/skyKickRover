@@ -16,12 +16,16 @@ namespace SkyKickRover.ValueObjects
             _y = y;
         }
 
-        public void MoveFoward(CardinalsEnumeration value)
+        public Position MoveFoward(CardinalsEnumeration value)
         {
-            if (value.Name.Equals(CardinalsEnumeration.North.Name)) _y += 1;
-            else if (value.Name.Equals(CardinalsEnumeration.South.Name)) _y -= 1;
-            else if (value.Name.Equals(CardinalsEnumeration.East.Name)) _x += 1;
-            else _x -= 1;
+            return value.Name switch
+            {
+                CardinalsEnumeration.NORTH => new Position(_x, _y + 1),
+                CardinalsEnumeration.SOUTH => new Position(_x, _y - 1),
+                CardinalsEnumeration.EAST => new Position(_x + 1, _y),
+                CardinalsEnumeration.WEST => new Position(_x - 1, _y),
+                _ => throw new ArgumentOutOfRangeException(nameof(value)),
+            };
         }
     }
 }
