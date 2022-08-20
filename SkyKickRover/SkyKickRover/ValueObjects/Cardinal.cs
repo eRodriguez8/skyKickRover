@@ -1,9 +1,10 @@
-﻿using SkyKickRover.Services.Interfaces;
-
-namespace SkyKickRover.ValueObjects
+﻿namespace SkyKickRover.ValueObjects
 {
     public class Cardinal
     {
+        private readonly Dictionary<string, string> _cardinalLeftPoints;
+        private readonly Dictionary<string, string> _cardinalRightPoints;
+
         public const string NORTH = "N";
         public const string SOUTH = "S";
         public const string EAST = "E";
@@ -17,29 +18,55 @@ namespace SkyKickRover.ValueObjects
         public string Value => _value;
 
         private readonly string _value;
-        private readonly IRotationService _rotationService;
-        private static List<Cardinal> List() => new() { North, South, East, West };
 
-        private Cardinal(string value)
+        public Cardinal(string value)
         {
             _value = value;
-        }
 
-        public Cardinal(string value, IRotationService rotationService) : this(List().FirstOrDefault(cardinal => cardinal._value == value).Value)
-        {
-            var state = List().FirstOrDefault(cardinal => cardinal._value == value);
-            if (state is null) throw new Exception("Invalid cardinal received");
-            _rotationService = rotationService;
+            _cardinalLeftPoints = InitializeLeftPoints();
+            _cardinalRightPoints = InitializeRightPoints();
         }
 
         public Cardinal RotateLeft()
         {
-            return _rotationService.GetLeftRotationCardinal(new Cardinal(_value));
+            return new Cardinal(GetLeftRotationCardinal(_value));
         }
 
         public Cardinal RotateRight()
         {
-            return _rotationService.GetRightRotationCardinal(new Cardinal(_value));
+            return new Cardinal(GetRightRotationCardinal(_value));
+        }
+
+        public string GetLeftRotationCardinal(string cardinal)
+        {
+            return _cardinalLeftPoints[cardinal];
+        }
+
+        public string GetRightRotationCardinal(string cardinal)
+        {
+            return _cardinalRightPoints[cardinal];
+        }
+
+        private static Dictionary<string, string> InitializeLeftPoints()
+        {
+            return new Dictionary<string, string>
+            {
+                { NORTH, WEST },
+                { SOUTH, EAST },
+                { EAST, NORTH },
+                { WEST, SOUTH }
+            };
+        }
+
+        private static Dictionary<string, string> InitializeRightPoints()
+        {
+            return new Dictionary<string, string>
+            {
+                { NORTH, EAST },
+                { SOUTH, WEST },
+                { EAST, SOUTH },
+                { WEST, NORTH }
+            };
         }
     }
 }

@@ -1,14 +1,24 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using SkyKickRover.Services;
-using SkyKickRover.Services.Interfaces;
+﻿using SkyKickRover.Enumeration;
+using SkyKickRover.Models;
+using SkyKickRover.ValueObjects;
 
-IHostBuilder hostBuilder = Host.CreateDefaultBuilder(args);
+Console.WriteLine("Welcome to Sky Kick");
+Console.WriteLine("Enter any Key: ");
+ConsoleKeyInfo keyPress = Console.ReadKey();
+Console.WriteLine("You pressed {0}", keyPress.KeyChar);
+var roverDefault = new Rover(new Position(0, 0));
+Console.WriteLine("Fisrt Rover land");
+Console.WriteLine(roverDefault.GetPosition());
+var roverWithCardinal = new Rover(new Position(0, 0), Cardinal.South);
 
-hostBuilder.ConfigureServices(
-    services => services
-        .AddTransient<IRotationService, RotationService>());
+Console.WriteLine("Second Rover land");
+Console.WriteLine(roverWithCardinal.GetPosition());
+Console.ReadKey();
 
-using IHost host = hostBuilder.Build();
+roverDefault.Move(MovementsEnumeration.Left);
+roverWithCardinal.Move(MovementsEnumeration.Right);
 
-await host.RunAsync();
+Console.WriteLine("Rotate");
+Console.WriteLine(roverDefault.GetPosition());
+Console.WriteLine(roverWithCardinal.GetPosition());
+Console.ReadKey();
