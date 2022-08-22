@@ -39,7 +39,7 @@ namespace SkyKickRover.Models
 
        public string GetPosition()
         {
-            return $"Identifier: {_guid}, X: {_position.X}, Y: {_position.Y}, Cardinal: {_cardinal.Value}";
+            return $"X: {_position.X}, Y: {_position.Y}, Cardinal: {_cardinal.Value}";
         }
     }
 }

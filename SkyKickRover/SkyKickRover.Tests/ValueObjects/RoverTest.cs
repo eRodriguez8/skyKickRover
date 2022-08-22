@@ -20,11 +20,11 @@ namespace SkyKickRover.Tests.ValueObjects
         [Trait("Categories", "Position")]
         public void Given_a_position_when_move_foward_recive_cardinal_north_then_should_increase_y()
         {
-            _rover.Move(MovementsEnumeration.Left);
+            _defaultCardinalRover.Move(MovementsEnumeration.Left);
 
-            _rover.GetPosition()
+            _defaultCardinalRover.GetPosition()
                 .Should()
-                .Be($"X: {0}, Y: {0}, Cardinal: {Cardinal.East.Value}");
+                .Be($"X: {0}, Y: {0}, Cardinal: {Cardinal.WEST}");
         }
     }
 }
